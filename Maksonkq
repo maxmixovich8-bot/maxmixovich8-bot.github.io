@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой первый сайт</title>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Onest:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --card: #13131a;
+      --accent: #7cffa4;
+      --text: #e8e8f0;
+      --muted: #6b6b80;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Onest', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Фоновая сетка */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(124,255,164,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,255,164,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    /* ШАПКА */
+    header {
+      padding: 60px 24px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(32px, 8vw, 56px);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    /* СЕКЦИИ */
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 28px;
+      animation: fadeUp 0.8s ease both;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      border-color: rgba(124,255,164,0.3);
+      transform: translateY(-2px);
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+
+    .card-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .card h2 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* СКИЛЛЫ */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .skill {
+      background: rgba(124,255,164,0.07);
+      border: 1px solid rgba(124,255,164,0.2);
+      color: var(--accent);
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 8px;
+    }
+
+    /* КОНТАКТ */
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--accent);
+      color: #0a0a0f;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 13px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn:hover { opacity: 0.85; transform: scale(0.98); }
+
+    /* АНИМАЦИЯ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="tag">Привет, мир 👋</div>
+    <h1>Я <span>начинающий</span><br>разработчик</h1>
+    <p class="subtitle">Это мой первый сайт. Я учусь создавать веб-страницы с нуля — HTML, CSS и немного мечты.</p>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <div class="card-label">Обо мне</div>
+      <h2>Кто я такой</h2>
+      <p>Я изучаю программирование самостоятельно. Начал с HTML и двигаюсь дальше — к JavaScript и Python. Каждый день узнаю что-то новое.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Навыки</div>
+      <h2>Что я уже умею</h2>
+      <p>Постепенно осваиваю технологии веб-разработки:</p>
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Python</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Контакт</div>
+      <h2>Написать мне</h2>
+      <p>Хочешь поговорить о коде или просто поздороваться? Я всегда рад общению.</p>
+      <a class="btn" href="mailto:твой@email.com">Написать письмо</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
