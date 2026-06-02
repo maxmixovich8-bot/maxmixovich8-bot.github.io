@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO & AEO теги -->
+  <title>Как выбрать ноутбук в 2025 году — простой гид</title>
+  <meta name="description" content="Понятный ответ на вопрос: как выбрать ноутбук в 2025 году. Советы по процессору, памяти и экрану для новичков." />
+
+  <!-- Schema markup для AEO (FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "На что смотреть при выборе ноутбука?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Смотри на процессор, оперативную память (минимум 8 ГБ), тип экрана и автономность. Для учёбы хватит Intel Core i5 или AMD Ryzen 5."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Сколько ОЗУ нужно для учёбы?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Для учёбы и браузера достаточно 8 ГБ. Если планируешь программировать или монтировать видео — бери 16 ГБ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Какой экран лучше для ноутбука?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IPS-матрица с разрешением Full HD (1920×1080). Она яркая, с хорошими углами обзора и не устаёт глаза."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Inter:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --accent: #c8ff00;
+      --text: #e8e8e8;
+      --muted: #666;
+      --border: #222;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Шапка */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    header span.dot {
+      width: 10px; height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    header p {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* Главный блок */
+    .hero {
+      max-width: 720px;
+      margin: 5rem auto 3rem;
+      padding: 0 2rem;
+    }
+    .hero h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em {
+      color: var(--accent);
+      font-style: normal;
+    }
+    .hero .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 560px;
+    }
+
+    /* FAQ-блок */
+    .faq {
+      max-width: 720px;
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+    }
+    .faq h2 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+      background: var(--surface);
+      transition: border-color 0.2s;
+    }
+    details[open] {
+      border-color: var(--accent);
+    }
+    summary {
+      padding: 1.1rem 1.4rem;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      color: var(--accent);
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .answer {
+      padding: 0 1.4rem 1.2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Советы */
+    .tips {
+      max-width: 720px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .tips h2 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 1.4rem;
+    }
+    .tip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .tip-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem;
+    }
+    .tip-card .icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.6rem;
+    }
+    .tip-card strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+    .tip-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="dot"></span>
+    <p>Гид для новичков</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Как выбрать <em>ноутбук</em> в 2025 году</h1>
+      <p class="lead">Без лишних слов — только то, что реально важно. Отвечаем на самые частые вопросы.</p>
+    </section>
+
+    <section class="faq">
+      <h2>Частые вопросы</h2>
+
+      <details open>
+        <summary>На что смотреть при выборе ноутбука?</summary>
+        <div class="answer">
+          Смотри на процессор, оперативную память (минимум 8 ГБ), тип экрана и автономность.
+          Для учёбы хватит <strong>Intel Core i5</strong> или <strong>AMD Ryzen 5</strong>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Сколько ОЗУ нужно для учёбы?</summary>
+        <div class="answer">
+          Для учёбы и браузера достаточно <strong>8 ГБ</strong>.
+          Если планируешь программировать или монтировать видео — бери <strong>16 ГБ</strong>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Какой экран лучше для ноутбука?</summary>
+        <div class="answer">
+          <strong>IPS-матрица</strong> с разрешением Full HD (1920×1080). Она яркая,
+          с хорошими углами обзора и не устаёт глаза.
+        </div>
+      </details>
+    </section>
+
+    <section class="tips">
+      <h2>Главные критерии</h2>
+      <div class="tip-grid">
+        <div class="tip-card">
+          <div class="icon">⚡</div>
+          <strong>Процессор</strong>
+          <p>i5 / Ryzen 5 — золотой стандарт для учёбы и работы</p>
+        </div>
+        <div class="tip-card">
+          <div class="icon">💾</div>
+          <strong>Память</strong>
+          <p>8 ГБ минимум, лучше 16. SSD обязателен — не HDD</p>
+        </div>
+        <div class="tip-card">
+          <div class="icon">🖥️</div>
+          <strong>Экран</strong>
+          <p>Full HD IPS, 14–15 дюймов — оптимально</p>
+        </div>
+        <div class="tip-card">
+          <div class="icon">🔋</div>
+          <strong>Автономность</strong>
+          <p>Смотри на реальные отзывы, а не на данные производителя</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Сделано для практики AEO · 2025
+  </footer>
+
+</body>
+</html>
